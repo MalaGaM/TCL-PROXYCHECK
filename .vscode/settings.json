@@ -1,0 +1,11 @@
+{
+	"sqltools.connections": [
+		{
+			"previewLimit": 50,
+			"driver": "SQLite",
+			"name": "ProxyCheck_db",
+			"database": "./db/ProxyCheck.db"
+		}
+	],
+	"sqltools.useNodeRuntime": true
+}
