@@ -1,4 +1,4 @@
-if { [catch { package require IRCServices 0.0.1 }] } { putloglev o * "\00304\[ProxyCheck - Error\]\003 ProxyCheck requires IRCServices package 0.0.1 (or higher) to work, Download from 'https://github.com/ZarTek-Creole/TCL-PKG-IRCServices'. The loading of the script was canceled." ; return }
+if { [catch { package require IRCServices 0.0.1 }] } { putloglev o * "\00304\[ProxyCheck - Error\]\003 ProxyCheck requires IRCServices package 0.0.1 (or higher) to work, Download from 'github.com/ZarTek-Creole/TCL-PKG-IRCServices'. The loading of the script was canceled." ; return }
 
 if { [catch { package require sqlite3 }] } { putloglev o * "\00304\[ProxyCheck - Error\]\003 ProxyCheck requires sqlite3 package to work, install with from 'apt install libsqlite3-tcl'. The loading of the script was canceled." ; return }
 
