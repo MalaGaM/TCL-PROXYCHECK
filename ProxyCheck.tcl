@@ -1,4 +1,4 @@
-if { [catch { package require IRCServices 0.0.1 }] } { putloglev o * "\00304\[ProxyCheck - Error\]\003 ProxyCheck requires IRCServices package 0.0.1 (or higher) to work, Download from 'https://github.com/MalaGaM/TCL-PKG-IRCServices'. The loading of the script was canceled." ; return }
+if { [catch { package require IRCServices 0.0.1 }] } { putloglev o * "\00304\[ProxyCheck - Error\]\003 ProxyCheck requires IRCServices package 0.0.1 (or higher) to work, Download from 'https://github.com/ZarTek-Creole/TCL-PKG-IRCServices'. The loading of the script was canceled." ; return }
 
 if { [catch { package require sqlite3 }] } { putloglev o * "\00304\[ProxyCheck - Error\]\003 ProxyCheck requires sqlite3 package to work, install with from 'apt install libsqlite3-tcl'. The loading of the script was canceled." ; return }
 
@@ -39,7 +39,7 @@ namespace eval ::ProxyCheck {
 
 	set config(scriptname)	"ProxyServ Service"
 	set config(version)		"1.1.20210521"
-	set config(auteur)		"MalaGaM"
+	set config(auteur)		"ZarTek"
 	set config(path_script)	[file dirname [info script]];
 	set config(vars_list)	[list	\
 		"uplink_host"		\
@@ -352,7 +352,7 @@ proc ::ProxyCheck::FCT:Socket:Connexion {} {
 		# si [target] commence par # c'est un salon
 		if { [string index [target] 0] == "#"} {
 			if { [string tolower $cmd] == "!help"		} {
-				# Received: :MalaGaM PRIVMSG #Eva :!help
+				# Received: :ZarTek PRIVMSG #Eva :!help
 				::ProxyCheck::IRC:CMD:PUB:HELP [who] [target] $cmd $data
 			}
 			if { [string tolower $cmd] == "!proxyserv"	} {
